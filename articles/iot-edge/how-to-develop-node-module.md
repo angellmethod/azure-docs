@@ -16,7 +16,7 @@ ms.service: iot-edge
 
 # Develop and debug Node.js modules with Azure IoT Edge for Visual Studio Code
 
-You can send your business logic to operate at the edge by turning it into modules for Azure IoT Edge. This article provides detailed instructions for using Visual Studio Code (VS Code) as the main development tool to develop C# modules.
+You can send your business logic to operate at the edge by turning it into modules for Azure IoT Edge. This article provides detailed instructions for using Visual Studio Code (VS Code) as the main development tool to develop Node.js modules.
 
 ## Prerequisites
 This article assumes that you are using a computer or virtual machine running Windows or Linux as your development machine. Your IoT Edge device can be another physical device, or you can simulate your IoT Edge device on your development machine.
@@ -72,7 +72,7 @@ Within the solution you have three items:
 
 * A **deployment.template.json** file lists your new module along with a sample **tempSensor** module that simulates data that you can use for testing. For more information about how deployment manifests work, see [Understand how IoT Edge modules can be used, configured, and reused](module-composition.md).
 
-## Devlop your module
+## Develop your module
 
 The default Azure Function code that comes with the solution is located at **modules** > **\<your module name\>** > **app.js**. The module and the deployment.template.json file are set up so that you can build the solution, push it to your container registry, and deploy it to a device to start testing without touching any code. The module is built to simply take input from a source (in this case, the tempSensor module that simulates data) and pipe it to IoT Hub. 
 
@@ -97,7 +97,7 @@ Then you can see the deployment is successfully created with a deployment ID in 
 
 You can check your container status in the VS Code Docker explorer or by run the `docker ps` command in the terminal.
 
-## Start debugging Node.Js module in VS Code
+## Start debugging Node.js module in VS Code
 
 VS Code keeps debugging configuration information in a `launch.json` file located in a `.vscode` folder in your workspace. This `launch.json` file was generated when you created a new IoT Edge solution. It updates each time you add a new module that supports debugging. 
 
